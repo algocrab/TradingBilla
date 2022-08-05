@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:trading_billa/utils/helper.dart';
 
-import '../fb_controller/firestore_controller.dart';
+import '../../fb_controller/firestore_controller.dart';
 
 class AllUsers extends StatefulWidget {
   const AllUsers({Key? key}) : super(key: key);
@@ -26,17 +26,24 @@ class _AllUsersState extends State<AllUsers> with Helpers{
               return ListView.builder(
                 itemCount: users.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: const Icon(Icons.note),
-                    title: Text(users[index].get('name')),
-                    subtitle: Text(users[index].get('email')),
-                    trailing: IconButton(
-                      onPressed: () async =>
-                      await deleteNote(path: users[index].id),
-                      icon: const Icon(
-                        Icons.delete,
-                        color: Colors.red,
-                      ),
+                  return Center(
+                    child: ListTile(
+                      leading: const Icon(Icons.person),
+                      title: Text(users[index].get('name')),
+                      subtitle: Text(users[index].get('email')),
+                      trailing: users[index].get('admin')
+                          ?Icon(Icons.add):
+                           Icon(Icons.ac_unit),
+                      // trailing:
+                      // IconButton(
+                      //   onPressed: () async =>
+                      //   await deleteNote(path: users[index].id),
+                      //   icon: const Icon(
+                      //     Icons.delete,
+                      //     color: Colors.red,
+                      //   ),
+                      // ),
+
                     ),
                   );
                 },
