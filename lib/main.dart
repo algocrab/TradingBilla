@@ -6,6 +6,7 @@ import 'package:trading_billa/view/auth/login.dart';
 import 'package:trading_billa/view/auth/login_screen.dart';
 import 'package:trading_billa/view/auth/register_screen.dart';
 import 'package:trading_billa/view/auth/reset_password.dart';
+import 'package:trading_billa/view/auth/splash_screen.dart';
 import 'package:trading_billa/view/auth/verify_screen.dart';
 
 void main() async{
@@ -25,8 +26,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        initialRoute: '/login_screen',
+        initialRoute: '/splash_screen',
         routes: {
+        '/splash_screen':(context)=>SplashScreen(),
           '/login_screen': (context) => LoginScreen(),
           '/register_screen': (context) => RegisterScreen(),
           '/forget_password': (context) => ForgetPassword(),

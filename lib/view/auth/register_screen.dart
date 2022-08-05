@@ -32,9 +32,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
       body: ListView(
         children: [
-          CustomImage(
-            imageURL: 'assets/register.svg',
-          ),
+      Padding(
+      padding: const EdgeInsets.only(left: 20,top: 60,right: 20),
+      child: Container(
+        height: 150,
+        child:SvgPicture.asset('assets/register.svg'),
+      ),
+    ),
 
 
           Padding(
