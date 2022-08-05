@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416737704575",
+    "project_id": "chat-dfa87",
+    "storage_bucket": "chat-dfa87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416737704575:android:6335e4787b31732503dd4a",
+        "android_client_info": {
+          "package_name": "com.appcaht.trading_billa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416737704575-5cjp50uv50p1o6d232r8k4597nhf0vpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDza9dtSsC-d7dEXMAzJdGXp7IB4XlXHQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416737704575-5cjp50uv50p1o6d232r8k4597nhf0vpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
