@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final String label;
   final Icon icon;
+  final TextEditingController controller;
+  final TextInputType textInputType;
 
   CustomTextField({
     required this.icon,
     required this.label,
+    required this.controller,
+    required this.textInputType,
 });
   @override
   Widget build(BuildContext context) {
@@ -23,9 +27,13 @@ class CustomTextField extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(right: 20,bottom: 7),
             child: TextField(
-            cursorColor: Colors.grey,
 
+              controller: controller,
+            keyboardType: textInputType,
+
+            cursorColor: Colors.grey,
               decoration: InputDecoration(
+
                 labelStyle: TextStyle(color: Colors.grey),
                   label: Padding(
                     padding: const EdgeInsets.only(top: 10),
